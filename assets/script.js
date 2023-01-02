@@ -10,20 +10,41 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
+
+  //setting variable for hour as 24 hour time
+  const $hour = parseInt(dayjs().format('HH'));
+  
+  $('[id^="hour-"]').each(function() {
+    var hourID = $(this).attr('id').replace('hour-', '');
+    var hourIDNum = parseInt(hourID);
+
+    if ($hour === hourIDNum) {
+      $(this).removeClass("future");
+      $(this).removeClass("past");
+      $(this).addClass("present");
+   
+    } else if ($hour < hourIDNum) {
+      $(this).removeClass("present");
+      $(this).removeClass("past");
+      $(this).addClass("future");
+   
+    } else if ($hour > hourIDNum) {
+      $(this).removeClass("present");
+      $(this).removeClass("future");
+      $(this).addClass("past");
+
+    }
+
+  });
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-
- const $day = dayjs().startOf('month').add(1, 'day').set('year', 2018).format('dddd, ' +'MMMM ' + 'D');
-$('#currentDay').append($day);
+  
+ 
+  // Displays current date in the header as Day of week, Month date (i.e. Monday, January 2)
+  const $day = dayjs().startOf('month').add(1, 'day').set('year', 2018).format('dddd, ' +'MMMM ' + 'D');
+  $('#currentDay').append($day);
 
 
 });
