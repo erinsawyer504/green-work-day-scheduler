@@ -14,21 +14,23 @@ $(function () {
   //setting variable for hour as 24 hour time
   const $hour = parseInt(dayjs().format('HH'));
   
+  //creating function to pull the #(hour) from the ID and then writing an if statement to add/remove
+  //the appropriate classes
+  
   $('[id^="hour-"]').each(function() {
-    var hourID = $(this).attr('id').replace('hour-', '');
-    var hourIDNum = parseInt(hourID);
+    var hourID = parseInt($(this).attr('id').replace('hour-', ''));
 
-    if ($hour === hourIDNum) {
+    if ($hour === hourID) {
       $(this).removeClass("future");
       $(this).removeClass("past");
       $(this).addClass("present");
    
-    } else if ($hour < hourIDNum) {
+    } else if ($hour < hourID) {
       $(this).removeClass("present");
       $(this).removeClass("past");
       $(this).addClass("future");
    
-    } else if ($hour > hourIDNum) {
+    } else if ($hour > hourID) {
       $(this).removeClass("present");
       $(this).removeClass("future");
       $(this).addClass("past");
