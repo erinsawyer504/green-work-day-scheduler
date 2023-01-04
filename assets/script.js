@@ -49,5 +49,19 @@ $(function () {
   const $day = dayjs().format('dddd, ' +'MMMM ' + 'D');
   $('#currentDay').append($day);
 
+  // adding 1"st", 2"nd", 3"rd", 4"th", ect to the end of the date
+  const $date = dayjs().format('D');
+  if ($date === 1) {
+    $('#currentDay').append('st');
+  } else if ($date === 2) {
+    $('#currentDay').append('nd');
+  } else if ($date === 3) {
+    $('#currentDay').append('rd');
+  } else {
+    $('#currentDay').append('th');
+  }
+
+  
+  
 
 });
