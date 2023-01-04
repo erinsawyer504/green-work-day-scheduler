@@ -1,14 +1,11 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
+
+I started this project with some starter code.  I worked with jQuery to make all the changes and for the app to function according to the user story and acceptance criteria.  
+
+## Links
 Deployed Website: https://erinsawyer504.github.io/green-work-day-scheduler/
 
 Github Repo: https://github.com/erinsawyer504/green-work-day-scheduler
-
-
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
 
 ## User Story
 
@@ -36,10 +33,10 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+The following image demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+
+![A user clicks on slots on the color-coded calendar and edits the events.](./assets/img/work-day-sch-photo.PNG)
 
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
