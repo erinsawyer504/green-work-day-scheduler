@@ -46,7 +46,7 @@ $(function () {
   });
 
   // Displays current date in the header as Day of week, Month date (i.e. Monday, January 2)
-  const $day = dayjs().startOf('month').add(1, 'day').set('year', 2018).format('dddd, ' +'MMMM ' + 'D');
+  const $day = dayjs().format('dddd, ' +'MMMM ' + 'D');
   $('#currentDay').append($day);
 
 
