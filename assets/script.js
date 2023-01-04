@@ -51,11 +51,11 @@ $(function () {
 
   // adding 1"st", 2"nd", 3"rd", 4"th", ect to the end of the date
   const $date = dayjs().format('D');
-  if ($date === 1) {
+  if ($date === 1 || $date === 21 || $date === 31) {
     $('#currentDay').append('st');
-  } else if ($date === 2) {
+  } else if ($date === 2 || $date === 22) {
     $('#currentDay').append('nd');
-  } else if ($date === 3) {
+  } else if ($date === 3 || $date === 23) {
     $('#currentDay').append('rd');
   } else {
     $('#currentDay').append('th');
